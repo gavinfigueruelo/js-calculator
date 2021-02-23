@@ -2,13 +2,11 @@ html {
   font-size: 10px;
   box-sizing: border-box;
 }
-
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
 }
-
 .calculator {
   border: 1px solid #1E1E1E;
   border-radius: 5px;
@@ -17,6 +15,7 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 300px;
+  box-shadow: 10px 5px 5px #5E5C5C;
 }
 
 .calculator-screen {
@@ -30,7 +29,6 @@ html {
   padding-right: 20px;
   padding-left: 30px;
 }
-
 button {
   height: 60px;
   border: 1px solid #5E5C5C;
@@ -38,24 +36,23 @@ button {
   color: #fff;
   background-color: #848281;
 }
-
 button:focus {
   outline: none;
 }
-
+button:active {
+  box-shadow: initial;
+}
 .operator, .equal-sign {
   background-color: #FF9D00;
 }
-
 .clear, .plus-minus, .percent {
   background-color: #6E6D6D;
 }
-
 .calculator-keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-
 .btn-lg {
+  grid-column-end: 3;
   grid-column: 1 / 3;
 }
